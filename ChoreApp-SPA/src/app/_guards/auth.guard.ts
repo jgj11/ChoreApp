@@ -12,7 +12,7 @@ export class AuthGuard implements CanActivate {
     if (this.authService.loggedIn()){
       return true;
     }
-    this.alertify.error('Not Authorized beyotch');
+    this.alertify.error('Not Authorized');
     this.router.navigate(['/home']);
     return false;
   }
