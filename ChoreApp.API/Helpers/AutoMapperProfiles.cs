@@ -24,6 +24,7 @@ namespace ChoreApp.API.Helpers
                 });
                 
             CreateMap<Photo, PhotosForDetailDto>();
+            CreateMap<UserForUpdateDto, User>();
         }
     }
 }
