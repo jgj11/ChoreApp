@@ -39,6 +39,7 @@ namespace ChoreApp.API
             //This fixes the self referencing loop issue
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1).AddJsonOptions(opt => {opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;});
             services.AddCors();
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
             services.AddAutoMapper();
             services.AddTransient<Seed>();
             //adding new auth service -- service is created once per request withint he scope --equivalent to singleton but in the scope itself
