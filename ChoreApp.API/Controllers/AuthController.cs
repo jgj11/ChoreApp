@@ -7,13 +7,14 @@ using AutoMapper;
 using ChoreApp.API.Data;
 using ChoreApp.API.Dtos;
 using ChoreApp.API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
 namespace ChoreApp.API.Controllers
 {
-
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
